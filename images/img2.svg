@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#eef7fb"/>
+  <g transform="translate(80,80)">
+    <rect width="640" height="440" rx="16" fill="#fff" stroke="#d7eef9"/>
+    <text x="320" y="220" font-size="28" text-anchor="middle" fill="#0b5f3b" font-family="Arial">Imagem Placeholder 2</text>
+  </g>
+</svg>

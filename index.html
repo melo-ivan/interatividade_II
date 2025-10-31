@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entrega III — SPA Interativa</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Entrega III — SPA Interativa</h1>
+    <nav>
+      <a href="#/" data-link>Home</a>
+      <a href="#/form" data-link>Formulário</a>
+      <a href="#/about" data-link>Sobre</a>
+    </nav>
+  </header>
+
+  <main id="app" class="container">
+    <!-- Views render aqui -->
+  </main>
+
+  <template id="tmpl-home">
+    <section class="card">
+      <h2>Bem-vindo</h2>
+      <p>SPA simples com roteamento, templates JS, validação de formulário, e armazenamento local.</p>
+      <div class="images-row">
+        <img src="images/img1.svg" alt="placeholder 1">
+        <img src="images/img2.svg" alt="placeholder 2">
+        <img src="images/img3.svg" alt="placeholder 3">
+      </div>
+    </section>
+  </template>
+
+  <template id="tmpl-form">
+    <section class="card">
+      <h2>Cadastro</h2>
+      <form id="contactForm" novalidate>
+        <label>Nome
+          <input type="text" name="name" required minlength="3" />
+          <small class="error" data-for="name"></small>
+        </label>
+
+        <label>Email
+          <input type="email" name="email" required />
+          <small class="error" data-for="email"></small>
+        </label>
+
+        <label>Telefone
+          <input type="tel" name="phone" required pattern="\d{10,11}" placeholder="apenas números" />
+          <small class="error" data-for="phone"></small>
+        </label>
+
+        <label>Idade
+          <input type="number" name="age" min="0" max="120" />
+          <small class="error" data-for="age"></small>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Enviar</button>
+          <button type="button" id="saveDraft">Salvar rascunho</button>
+          <button type="button" id="clearStorage">Limpar armazenamento</button>
+        </div>
+      </form>
+      <div id="formMessages" aria-live="polite"></div>
+    </section>
+  </template>
+
+  <template id="tmpl-about">
+    <section class="card">
+      <h2>Sobre</h2>
+      <p>Projeto demonstrativo: SPA com templates JavaScript, router simples, módulos e validação.</p>
+      <ul>
+        <li>Manipulação do DOM</li>
+        <li>Sistema de templates JS</li>
+        <li>Validação com avisos ao usuário</li>
+        <li>Armazenamento local (localStorage)</li>
+      </ul>
+    </section>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
